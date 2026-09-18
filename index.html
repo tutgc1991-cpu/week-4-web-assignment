@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SpendWise Dashboard</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="dashboard">
+
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar">
+            <div class="logo">
+                <h2>SpendWise</h2>
+                <p>Personal Finance</p>
+            </div>
+
+            <nav class="navigation">
+                <a href="#" class="nav-item active">🏠 Dashboard</a>
+                <a href="#" class="nav-item">💰 Transactions</a>
+                <a href="#" class="nav-item">📊 Reports</a>
+                <a href="#" class="nav-item">🎯 Budgets</a>
+                <a href="#" class="nav-item">⚙️ Settings</a>
+            </nav>
+
+            <div class="sidebar-footer">
+                <p>Stay on track with your spending.</p>
+            </div>
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Header -->
+            <header class="header">
+                <div class="header-title">
+                    <h1>Dashboard</h1>
+                    <p>Welcome back! Here's your spending overview.</p>
+                </div>
+
+                <div class="user-info">
+                    <div class="user-avatar">TG</div>
+                    <div>
+                        <strong>Tut Gatluak</strong>
+                        <span>My Account</span>
+                    </div>
+                </div>
+            </header>
+
+
+            <!-- Summary Section -->
+            <section class="summary">
+                <div class="summary-box">
+                    <span>Total Budget</span>
+                    <strong>$2,500</strong>
+                </div>
+
+                <div class="summary-box">
+                    <span>Total Spent</span>
+                    <strong>$1,680</strong>
+                </div>
+
+                <div class="summary-box">
+                    <span>Remaining</span>
+                    <strong>$820</strong>
+                </div>
+            </section>
+
+
+            <!-- Category Cards -->
+            <section class="dashboard-section">
+                <div class="section-heading">
+                    <div>
+                        <h2>Spending Categories</h2>
+                        <p>Your current spending by category.</p>
+                    </div>
+                </div>
+
+                <div class="category-grid">
+
+                    <!-- Food Card -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">🍔</div>
+                            <span class="status">On Track</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Food</h3>
+                            <p>Groceries and meals</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>$320</strong>
+                            <span>of $450</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar food-progress"></div>
+                        </div>
+                    </article>
+
+
+                    <!-- Transport Card -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">🚗</div>
+                            <span class="status">On Track</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Transport</h3>
+                            <p>Fuel and public transport</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>$180</strong>
+                            <span>of $300</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar transport-progress"></div>
+                        </div>
+                    </article>
+
+
+                    <!-- Rent Card -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">🏠</div>
+                            <span class="status">Fixed</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Rent</h3>
+                            <p>Monthly housing expense</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>$650</strong>
+                            <span>of $700</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar rent-progress"></div>
+                        </div>
+                    </article>
+
+
+                    <!-- Entertainment Card -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">🎬</div>
+                            <span class="status">Good</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Entertainment</h3>
+                            <p>Movies and leisure</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>$120</strong>
+                            <span>of $200</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar entertainment-progress"></div>
+                        </div>
+                    </article>
+
+
+                    <!-- Savings Card -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">💰</div>
+                            <span class="status">Growing</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Savings</h3>
+                            <p>Monthly savings goal</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>$250</strong>
+                            <span>of $400</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar savings-progress"></div>
+                        </div>
+                    </article>
+
+
+                    <!-- Utilities Card -->
+                    <article class="category-card" tabindex="0">
+                        <div class="card-top">
+                            <div class="category-icon">💡</div>
+                            <span class="status">On Track</span>
+                        </div>
+
+                        <div class="card-content">
+                            <h3>Utilities</h3>
+                            <p>Electricity and internet</p>
+                        </div>
+
+                        <div class="card-bottom">
+                            <strong>$160</strong>
+                            <span>of $250</span>
+                        </div>
+
+                        <div class="progress">
+                            <div class="progress-bar utilities-progress"></div>
+                        </div>
+                    </article>
+
+                </div>
+            </section>
+
+        </main>
+
+    </div>
+
+</body>
+</html>

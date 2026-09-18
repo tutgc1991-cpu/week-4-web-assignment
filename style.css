@@ -1,0 +1,596 @@
+/* =========================================
+   SpendWise Dashboard
+   CSS Grid + Flexbox
+   ========================================= */
+
+
+/* =========================================
+   CSS CUSTOM PROPERTIES / THEME
+   ========================================= */
+
+:root {
+    --brand-color: #2563eb;
+    --accent-color: #10b981;
+
+    --surface-color: #ffffff;
+    --background-color: #f4f7fb;
+
+    --primary-text: #172033;
+    --secondary-text: #64748b;
+
+    --border-color: #e2e8f0;
+    --sidebar-color: #111827;
+
+    --success-background: #dcfce7;
+    --success-text: #166534;
+
+    --shadow: 0 4px 12px rgba(15, 23, 42, 0.08);
+
+    --transition-speed: 200ms;
+}
+
+
+/* =========================================
+   BASIC RESET
+   ========================================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--background-color);
+    color: var(--primary-text);
+    line-height: 1.5;
+}
+
+
+/* =========================================
+   OVERALL DASHBOARD
+   CSS GRID
+   ========================================= */
+
+.dashboard {
+    min-height: 100vh;
+
+    display: grid;
+
+    grid-template-columns: 240px 1fr;
+}
+
+
+/* =========================================
+   SIDEBAR
+   FLEXBOX
+   ========================================= */
+
+.sidebar {
+    background-color: var(--sidebar-color);
+    color: white;
+
+    padding: 28px 20px;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+
+.logo {
+    margin-bottom: 40px;
+}
+
+
+.logo h2 {
+    font-size: 24px;
+    margin-bottom: 4px;
+}
+
+
+.logo p {
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+
+/* Navigation */
+
+.navigation {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+
+.nav-item {
+    color: #cbd5e1;
+    text-decoration: none;
+
+    padding: 12px 14px;
+
+    border-radius: 8px;
+
+    transition:
+        background-color var(--transition-speed) ease,
+        color var(--transition-speed) ease;
+}
+
+
+.nav-item:hover {
+    background-color: #1e293b;
+    color: white;
+}
+
+
+.nav-item.active {
+    background-color: var(--brand-color);
+    color: white;
+}
+
+
+.sidebar-footer {
+    margin-top: auto;
+
+    padding-top: 25px;
+
+    color: #94a3b8;
+    font-size: 13px;
+}
+
+
+/* =========================================
+   MAIN CONTENT
+   ========================================= */
+
+.main-content {
+    padding: 32px;
+
+    min-width: 0;
+}
+
+
+/* =========================================
+   HEADER
+   FLEXBOX
+   ========================================= */
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 20px;
+
+    margin-bottom: 30px;
+}
+
+
+.header-title h1 {
+    font-size: 30px;
+    margin-bottom: 5px;
+}
+
+
+.header-title p {
+    color: var(--secondary-text);
+}
+
+
+/* User information */
+
+.user-info {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+
+.user-info strong {
+    display: block;
+}
+
+
+.user-info span {
+    display: block;
+    color: var(--secondary-text);
+    font-size: 13px;
+}
+
+
+.user-avatar {
+    width: 44px;
+    height: 44px;
+
+    border-radius: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background-color: var(--brand-color);
+    color: white;
+
+    font-weight: bold;
+}
+
+
+/* =========================================
+   SUMMARY BOXES
+   FLEXBOX
+   ========================================= */
+
+.summary {
+    display: flex;
+    gap: 20px;
+
+    margin-bottom: 35px;
+}
+
+
+.summary-box {
+    flex: 1;
+
+    background-color: var(--surface-color);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 12px;
+
+    padding: 20px;
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+
+.summary-box span {
+    color: var(--secondary-text);
+    font-size: 14px;
+}
+
+
+.summary-box strong {
+    font-size: 25px;
+}
+
+
+/* =========================================
+   SECTION HEADING
+   ========================================= */
+
+.dashboard-section {
+    width: 100%;
+}
+
+
+.section-heading {
+    margin-bottom: 18px;
+}
+
+
+.section-heading h2 {
+    font-size: 22px;
+    margin-bottom: 4px;
+}
+
+
+.section-heading p {
+    color: var(--secondary-text);
+}
+
+
+/* =========================================
+   CATEGORY CARDS
+   CSS GRID
+   ========================================= */
+
+.category-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+
+    gap: 20px;
+}
+
+
+/* =========================================
+   CATEGORY CARD
+   FLEXBOX
+   ========================================= */
+
+.category-card {
+    background-color: var(--surface-color);
+
+    border: 1px solid var(--border-color);
+
+    border-radius: 14px;
+
+    padding: 22px;
+
+    min-height: 220px;
+
+    box-shadow: var(--shadow);
+
+    display: flex;
+    flex-direction: column;
+
+    transition:
+        transform 200ms ease,
+        box-shadow 200ms ease;
+}
+
+
+/* Hover micro-interaction */
+
+.category-card:hover {
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+
+/* Keyboard focus micro-interaction */
+
+.category-card:focus {
+    outline: 3px solid rgba(37, 99, 235, 0.25);
+
+    transform: translateY(-4px);
+
+    box-shadow:
+        0 10px 25px rgba(15, 23, 42, 0.12);
+}
+
+
+/* =========================================
+   CARD CONTENT
+   FLEXBOX
+   ========================================= */
+
+.card-top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    margin-bottom: 20px;
+}
+
+
+.category-icon {
+    width: 48px;
+    height: 48px;
+
+    border-radius: 12px;
+
+    background-color: #eff6ff;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    font-size: 22px;
+}
+
+
+.status {
+    background-color: var(--success-background);
+    color: var(--success-text);
+
+    padding: 5px 9px;
+
+    border-radius: 20px;
+
+    font-size: 12px;
+    font-weight: bold;
+}
+
+
+.card-content {
+    margin-bottom: auto;
+}
+
+
+.card-content h3 {
+    font-size: 19px;
+    margin-bottom: 3px;
+}
+
+
+.card-content p {
+    color: var(--secondary-text);
+    font-size: 13px;
+}
+
+
+.card-bottom {
+    display: flex;
+    align-items: baseline;
+    gap: 5px;
+
+    margin-top: 20px;
+}
+
+
+.card-bottom strong {
+    font-size: 22px;
+}
+
+
+.card-bottom span {
+    color: var(--secondary-text);
+    font-size: 13px;
+}
+
+
+/* =========================================
+   PROGRESS BAR
+   ========================================= */
+
+.progress {
+    width: 100%;
+    height: 7px;
+
+    background-color: #e5e7eb;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+    margin-top: 10px;
+}
+
+
+.progress-bar {
+    height: 100%;
+
+    border-radius: 10px;
+
+    background-color: var(--brand-color);
+}
+
+
+.food-progress {
+    width: 71%;
+}
+
+
+.transport-progress {
+    width: 60%;
+}
+
+
+.rent-progress {
+    width: 93%;
+}
+
+
+.entertainment-progress {
+    width: 60%;
+}
+
+
+.savings-progress {
+    width: 63%;
+}
+
+
+.utilities-progress {
+    width: 64%;
+}
+
+
+/* =========================================
+   RESPONSIVE DESIGN
+   BELOW 768px
+   ========================================= */
+
+@media (max-width: 767px) {
+
+    /* Change overall layout to one column */
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+
+
+    /* Sidebar becomes part of the normal page flow */
+
+    .sidebar {
+        min-height: auto;
+
+        padding: 20px;
+    }
+
+
+    .logo {
+        margin-bottom: 20px;
+    }
+
+
+    .navigation {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+
+    .nav-item {
+        flex: 1 1 auto;
+    }
+
+
+    .sidebar-footer {
+        display: none;
+    }
+
+
+    /* Main content */
+
+    .main-content {
+        padding: 20px;
+    }
+
+
+    /* Header stacks vertically */
+
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+
+    /* Summary boxes stack */
+
+    .summary {
+        flex-direction: column;
+    }
+
+
+    /* Category cards become one column */
+
+    .category-grid {
+        grid-template-columns: 1fr;
+    }
+
+}
+
+
+/* =========================================
+   DARK THEME
+   STRETCH GOAL
+   ========================================= */
+
+@media (prefers-color-scheme: dark) {
+
+    :root {
+        --surface-color: #1e293b;
+        --background-color: #0f172a;
+
+        --primary-text: #f8fafc;
+        --secondary-text: #94a3b8;
+
+        --border-color: #334155;
+        --sidebar-color: #020617;
+
+        --success-background: #14532d;
+        --success-text: #bbf7d0;
+
+        --shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .category-icon {
+        background-color: #172554;
+    }
+
+    .progress {
+        background-color: #334155;
+    }
+
+}
